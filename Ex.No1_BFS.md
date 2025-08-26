@@ -1,6 +1,6 @@
 # Ex.No: 1  Implementation of Breadth First Search 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 26/08/2025                                                                           
+### REGISTER NUMBER : 212223060128
 ### AIM: 
 To write a python program to implement Breadth first Search. 
 ### Algorithm:
@@ -14,7 +14,31 @@ To write a python program to implement Breadth first Search.
 8.   Stop the program.
 ### Program:
 
+```
+graph = {
+ '5' : ['3','7'],
+ '3' : ['2', '4'],
+ '7' : ['8'],
+ '2' : [],
+ '4' : ['8'],
+ '8' : []
+ }
+visited = []
+queue = [] 
+def bfs(visited, graph, node):
+ 	 visited.append(node)
+ 	 queue.append(node)
+ 	 while queue:
+ 	     m = queue.pop(0) 
+ 	     print (m) 
+ 	 for neighbour in graph[m]:
+ 	     if neighbour not in visited:
+ 	         visited.append(neighbour)
+ 	         queue.append(neighbour)
 
+print("Following is the Breadth-First Search")
+bfs(visited, graph, '5') 
+```
 
 
 
@@ -26,6 +50,7 @@ To write a python program to implement Breadth first Search.
 
 ### Output:
 
+<img width="453" height="136" alt="Screenshot 2025-08-26 094303" src="https://github.com/user-attachments/assets/b9030641-d65c-4bd7-b893-0f81781822b3" />
 
 
 ### Result:
