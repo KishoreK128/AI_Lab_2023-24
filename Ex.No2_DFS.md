@@ -1,6 +1,6 @@
 # Ex.No: 2  Implementation of Depth First Search
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 26/08/2025                                                                           
+### REGISTER NUMBER : 212223060128
 ### AIM: 
 To write a python program to implement Depth first Search. 
 ### Algorithm:
@@ -12,7 +12,36 @@ To write a python program to implement Depth first Search.
 6. Call the dfs function by passing arguments visited, graph and starting node.
 7. Stop the program.
 ### Program:
+...
+from collections import deque
 
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+
+    while queue:
+        vertex = queue.popleft()
+        if vertex not in visited:
+            print(vertex, end=" ")
+            visited.add(vertex)
+
+            
+            for neighbor in graph[vertex]:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B', 'F'],
+    'F': ['C', 'E']
+}
+
+print("Breadth-First Search starting from node A:")
+bfs(graph, 'A')
+...
 
 
 
@@ -25,6 +54,7 @@ To write a python program to implement Depth first Search.
 
 ### Output:
 
+<img width="441" height="134" alt="Screenshot 2025-08-26 095145" src="https://github.com/user-attachments/assets/3091a838-df06-4541-bb2a-5518950cf4f2" />
 
 
 ### Result:
