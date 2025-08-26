@@ -13,7 +13,7 @@ To write a python program to implement Depth first Search.
 7. Stop the program.
 ### Program:
 
-...
+```
 from collections import deque
 
 def bfs(graph, start):
@@ -42,8 +42,7 @@ graph = {
 
 print("Breadth-First Search starting from node A:")
 bfs(graph, 'A')
-...
-
+```
 
 
 
